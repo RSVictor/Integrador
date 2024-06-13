@@ -1,0 +1,411 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Remove padding and margin from body */
+body {
+  padding: 0;
+  margin: 0;
+  overflow-y: scroll;
+}
+
+/* Barra Superior */
+.topbar {
+  position: fixed;
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
+  width: 100%;
+  padding: 0 20px;
+  height: 50px;
+  display: flex;
+  z-index: 1;
+  justify-content: right;
+  align-items: center;
+}
+
+/* Imagem logo*/
+.logo img {
+  align-items: center;
+  position: relative;
+  width: 250px;
+  height: 250px;
+  margin-top: 5px;
+  top: 0;
+  object-fit: cover;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 260px;
+  height: 100%;
+  background: black;
+  overflow-x: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.sidebar .opcoes-menu {
+  margin-top: 20px;
+}
+
+.sidebar .opcoes-menu {
+  width: 100%;
+  list-style: none;
+}
+
+.sidebar .opcoes-menu:hover {
+  background: #fff;
+}
+
+.sidebar .opcoes-menu:hover a {
+  color: #12127a;
+}
+
+.sidebar .opcoes-menu a {
+  width: 100%;
+  text-decoration: none;
+  color: #fff;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar .opcoes-menu a i {
+  min-width: 60px;
+  font-size: 24px;
+  text-align: center;
+}
+
+/* Main */
+.main {
+  position: absolute;
+  top: 60px;
+  left: 260px;
+  width: calc(100% - 260px);
+  min-height: calc(100vh - 60px);
+  background: #fff;
+}
+
+/* Caroucel*/
+.carousel-control-prev {
+  left: 10%;
+}
+
+.carousel-control-next {
+  right: 10%;
+}
+
+.carousel-inner {
+  position: relative;
+  max-width: 100%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  overflow: hidden;
+}
+
+.carouselExampleIndicators {
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.carousel-item img {
+  max-width: 69%;
+  height: auto;
+  margin-left: 16%;
+  object-fit: cover;
+}
+
+.carousel-indicators {
+  position: absolute;
+  top: 65%;
+  left: 36%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.control {
+  position: absolute;
+  top: 5%;
+  transform: translateY(-50%);
+  width: 100%;
+  z-index: 2;
+}
+
+/* Cards*/
+.cards {
+  width: 100%;
+  padding: 30px 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  text-align: center;
+  float: right;
+  margin-top: 0px;
+}
+
+.cards-shadow {
+  width: 100%;
+  padding: 20px 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  grid-gap: 10px;
+  text-align: center;
+  float: right;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.cards-sobre {
+  padding: 20px;
+  display: grid;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  float: right;
+}
+
+.col {
+  width: 200px;
+  padding: 20px;
+  padding: 20px;
+  display: grid;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  float: right;
+  margin-top: 100px;
+}
+
+.cards .card {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+
+.number {
+  font-size: 35px;
+  font-weight: 500;
+  color: #084d6e;
+}
+
+.card-name {
+  color: #888;
+  font-weight: 600;
+}
+
+.icon-box i {
+  font-size: 45px;
+  color: #084d6e;
+}
+
+/* charts */
+.charts {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 20px;
+  width: 100%;
+  padding: 20px;
+  padding-top: 0;
+  float: right;
+  margin-bottom: 60px;
+}
+
+.chart {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  width: 100%;
+}
+
+.chart h2 {
+  margin-bottom: 5px;
+  font-size: 20px;
+  color: #666;
+  text-align: center;
+}
+
+/* Botão de alternar gráfico*/
+#toggleButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.icone-perfil {
+  font-size: 25px;
+  color: black;
+}
+
+p {
+  font-size: 19px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+/*Tabela Ficha Técnica*/
+.descricao {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 69%;
+  height: auto;
+  margin-left: 16%;
+  object-fit: cover;
+  padding-top: 20px;
+  padding-bottom: 80px;
+  align-items: start;
+}
+
+.tabelas {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 50%;
+  padding: 1%;
+}
+
+th,
+td {
+  border: 1px solid black;
+  text-align: center;
+  background-color: #fff;
+  padding: 10px;
+}
+
+tr td {
+  font-size: 15px;
+}
+
+th {
+  font-size: 16px;
+  background-color: #999;
+}
+
+/*Rodape*/
+.footer {
+  text-align: center;
+  align-items: center;
+  position: absolute;
+  background: #fff;
+  display: flex;
+  color: black;
+  justify-content: center;
+  z-index: 1;
+  min-height: 60px;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  bottom: 0;
+  right: 0;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 1115px) {
+  .sidebar {
+    width: 60px;
+  }
+
+  .main {
+    width: calc(100% - 60px);
+    left: 60px;
+  }
+
+  .logo-senai {
+    width: 150px;
+    height: 30px;
+  }
+
+  .logo img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .carousel-item img {
+    width: 100%;
+    height: auto;
+  }
+
+  .control {
+    top: 5%;
+  }
+
+  .carousel-indicators {
+    top: 5%;
+  }
+}
+
+@media (max-width: 880px) {
+  .fa-bell {
+    justify-self: left;
+  }
+
+  .cards {
+    width: 100%;
+    padding: 35px 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+
+  .charts {
+    grid-template-columns: 1fr;
+  }
+
+  .doughnut-chart {
+    padding: 50px;
+  }
+
+  #doughnut {
+    padding: 50px;
+  }
+
+  .descricao {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tabelas {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .topbar {
+    grid-template-columns: 1fr 5fr 0.4fr 1fr;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .doughnut-chart {
+    padding: 10px;
+  }
+
+  #doughnut {
+    padding: 0px;
+  }
+}
